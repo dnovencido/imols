@@ -14,26 +14,19 @@ AppAsset::register($this);
 
 <?php 
 
-if (Yii::$app->controller->action->id === 'register') { 
+if (Yii::$app->controller->action->id === 'signup') { 
 
-// echo $this->render(
-//     'main_register',
-//     ['content' => $content]
-// );
+    echo $this->render(
+        'main_register',
+        ['content' => $content]
+    );
 
 } else if(Yii::$app->controller->action->id === 'login') {
 
-echo $this->render(
-    'main_login',
-    ['content' => $content]
-);
-    
-} else if( Yii::$app->controller->module->id === 'lpc' && Yii::$app->user->isGuest ) {
-
-echo $this->render(
-    'main_lpc',
-    ['content' => $content]
-);
+    echo $this->render(
+        'main_login',
+        ['content' => $content]
+    );
 
 } else {
 
@@ -50,8 +43,6 @@ echo $this->render(
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
-
-
 
 <main role="main" class="flex-shrink-0">
     <div class="container">
